@@ -131,8 +131,16 @@ def format_instruction_example(example):
     
     return f'### Instruction:\n{instruction}\n\n### Response:\n{response}'
 
-# Step 11 - format_all_examples (not yet solved)
-# TODO: implement
+# Step 11 - format_all_examples
+def format_all_examples(examples):
+    """Format each instruction/response dict into a training string."""
+    # TODO: apply format_instruction_example to every example and return the list
+    texts = []
+    for example in examples:
+        formatted = format_instruction_example(example)
+        texts.append(formatted)
+
+    return texts
 
 # Step 12 - build_text_dataset (not yet solved)
 # TODO: implement
